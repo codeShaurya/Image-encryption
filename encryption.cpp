@@ -21,10 +21,17 @@ int main()
     x[0]=0.4; //Base condition for logistic map
     for (int i = 1; i <= 100; ++i)
         x[i]=u*x[i-1]*(1-x[i-1]);
-    
+
     for (int i = 0; i<=100; ++i)
         cout<<x[i]<<" ";
 
+    // reading image pixel
+    for(int r = 0; r < image.rows; ++r) {
+    for(int c = 0; c < image.cols; ++c) {
+        cout << "Pixel at position (x, y) : (" << c << ", " << r << ") =";
+        cout<<image.at<Vec3b>(r,c) <<endl;
+    }
+    }
     namedWindow("Shubham@shaurya", WINDOW_AUTOSIZE );
     imshow("Shubham@shaurya", image);
     waitKey(0);
