@@ -41,6 +41,8 @@ int main()
     		i++;
     	}
     }
+    
+    imwrite("encryptedImage.jpg",image);
     namedWindow("Shubham@shaurya", WINDOW_AUTOSIZE );
     imshow("Shubham@shaurya", image);
     waitKey(0);
