@@ -15,7 +15,7 @@ int main()
     image = imread( "Image.jpg", 1 );
     if ( !image.data )
     {
-    	printf("No image data \n");
+    	cout<<"No image data \n";
     	return -1;
     }
     //Applying Logistic map
@@ -27,19 +27,21 @@ int main()
 
     // reading image pixel
     int i=1;
+    int l;
 
     for(int r = 0; r < image.rows; ++r) {
     	for(int c = 0; c < image.cols; ++c) {
-    		if(i>100)
+    		if(i>100){
     			i=1;
-    		int l=x[i]*MAX;
-    		l=l%255;
+            }
+            l=x[i]*MAX;
+            l=l%255;
         // cout << "Pixel at position (x, y) : (" << c << ", " << r << ") =";
-    		image.at<Vec3b>(r,c)[0]=image.at<Vec3b>(r,c)[0]^l;
-    		image.at<Vec3b>(r,c)[1]=image.at<Vec3b>(r,c)[1]^l;
-    		image.at<Vec3b>(r,c)[2]=image.at<Vec3b>(r,c)[2]^l;
-    		i++;
-    	}
+            image.at<Vec3b>(r,c)[0]=image.at<Vec3b>(r,c)[0]^l;
+            image.at<Vec3b>(r,c)[1]=image.at<Vec3b>(r,c)[1]^l;
+            image.at<Vec3b>(r,c)[2]=image.at<Vec3b>(r,c)[2]^l;
+            i++;
+        }
     }
     
     imwrite("encryptedImage.jpg",image);
