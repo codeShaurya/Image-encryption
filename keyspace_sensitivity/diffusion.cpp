@@ -17,7 +17,7 @@ int main()
 {
   Mat image,encImage1,encImage2,tempImage,diffImage;
   int i,l;
-  double u1=3.94001,u2=3.94002,percenDiff,count=0;         
+  double u1=3.94001,u2=3.94002,percenDiff,count=0;       
   vector<pair<double,int >> x1,x2;
   Vec<unsigned char, 3>  pixel,pixel1;
 
@@ -31,9 +31,6 @@ int main()
 
   x1.push_back({0.400001,0});
   x2.push_back({0.400002,0});
-
-  // cout<<u1<<endl<<u2<<endl;
-  // cout<<x1[0].first<<endl<<x2[0].first<<endl;
 
   double temp;
   for (int i = 1; i <= 511; ++i){
@@ -54,6 +51,7 @@ int main()
 
   i=1;
 
+  tempImage = image;
   for(int r = 0; r < image.rows; ++r) {
     for(int c = 0; c < image.cols; ++c) {
       if(i>100){
@@ -67,6 +65,7 @@ int main()
       i++;
     }
   }
+
   encImage1=image;
   image=tempImage;
 
@@ -108,16 +107,16 @@ int main()
 
   diffImage = encImage1 - encImage2;
 
-  imwrite("Image/keyspace_sensitivity/perm_diff_1.jpg",encImage1);
+  imwrite("Image/keyspace_sensitivity/diff_1.jpg",encImage1);
   imshow("Encrypted test image 1", encImage1);
   waitKey(0);
 
-  imwrite("Image/keyspace_sensitivity/perm_diff_2.jpg",encImage2);
+  imwrite("Image/keyspace_sensitivity/diff_2.jpg",encImage2);
   imshow("Encrypted test image 2", encImage2);
   waitKey(0);
 
 
-  imwrite("Image/keyspace_sensitivity/difference_perm_diff.jpg",diffImage);
+  imwrite("Image/keyspace_sensitivity/difference_diff.jpg",diffImage);
   imshow("difference Image of the two encrypted image", diffImage);
   waitKey(0);
 

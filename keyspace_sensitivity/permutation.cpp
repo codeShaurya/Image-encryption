@@ -107,11 +107,11 @@ int main()
 
   diffImage = encImage1 - encImage2;
 
-  imwrite("Image/keyspace_sensitivity/perm_diff_1.jpg",encImage1);
+  imwrite("Image/keyspace_sensitivity/perm_1.jpg",encImage1);
   imshow("Encrypted test image 1", encImage1);
   waitKey(0);
 
-  imwrite("Image/keyspace_sensitivity/perm_diff_2.jpg",encImage2);
+  imwrite("Image/keyspace_sensitivity/perm_2.jpg",encImage2);
   imshow("Encrypted test image 2", encImage2);
   waitKey(0);
 
