@@ -22,7 +22,7 @@ In this project a Research Paper is used. [Evaluating the permutation and diffus
 
 **prerequisites:**
   * Basic operations on images
-  * Basic knowledge of OpenC with c++
+  * Basic knowledge of OpenCV with C++
 
   Here OpenCv with c++ is not mandatory work environment. You can also choose Matlab or openCv with any language. Main part of this implementation is the algorithm.
 
