@@ -25,3 +25,7 @@ In this project a Research Paper is used. [Evaluating the permutation and diffus
   * Basic knowledge of OpenC with c++
 
   Here OpenCv with c++ is not mandatory work environment. You can also choose Matlab or openCv with any language. Main part of this implementation is the algorithm.
+
+# Execution example:
+
+![alt text](Image/example_encryption_decryption_image.png)
